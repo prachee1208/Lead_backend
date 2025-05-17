@@ -8,7 +8,7 @@ const connectDB = async () => {
     mongoose.set('strictQuery', false);
 
     // Connect to MongoDB
-    const conn = await mongoose.connect('mongodb://localhost:27017/leadmanagement');
+    const conn = await mongoose.connect('mongodb+srv://root:root@cluster0.swl48w9.mongodb.net/leadmanagement');
 
     console.log('✅ MongoDB Connected');
 
