@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/leadmanag
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-const API_URL = 'https://lead-backend-jcyc.onrender.com/api';
+const API_URL = process.env.API_BASE_URL || 'http://localhost:8000/api';
 
 async function createAndAssignLead() {
   try {

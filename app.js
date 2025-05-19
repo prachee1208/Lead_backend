@@ -24,6 +24,8 @@ var usersRouter = require('./routes/userRoutes');
 var leadsRouter = require('./routes/leadRoutes');
 var remindersRouter = require('./routes/reminderRoutes');
 var performanceRouter = require('./routes/performanceRoutes');
+const followUpRoutes = require('./routes/followUpRoutes');
+const taskRoutes = require('./routes/taskRoutes');
 
 var app = express();
 
@@ -57,6 +59,8 @@ app.use('/api/users', usersRouter);
 app.use('/api/leads', leadsRouter);
 app.use('/api/reminders', remindersRouter);
 app.use('/api/performance', performanceRouter);
+app.use('/api/follow-ups', followUpRoutes);
+app.use('/api/tasks', taskRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
